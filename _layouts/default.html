@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.summary | default: site.description | strip_html | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">首页</a>
+        <a href="{{ '/reports/' | relative_url }}">报告</a>
+        <a href="{{ '/reports/template/' | relative_url }}">模板</a>
+        <a href="https://github.com/Molaison/ResearchForChatgpt">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Generated research archive · Markdown + HTML · Updated by repository commits and GitHub Pages builds.</p>
+    </div>
+  </footer>
+</body>
+</html>
