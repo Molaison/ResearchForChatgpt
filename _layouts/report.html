@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="report">
+  <header class="report-header">
+    <p class="eyebrow">Research Report</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="lead">{{ page.summary }}</p>{% endif %}
+    <div class="meta-grid">
+      {% if page.date %}<div><span>日期</span><strong>{{ page.date | date: "%Y-%m-%d" }}</strong></div>{% endif %}
+      {% if page.status %}<div><span>状态</span><strong>{{ page.status }}</strong></div>{% endif %}
+      {% if page.author %}<div><span>作者</span><strong>{{ page.author }}</strong></div>{% endif %}
+      {% if page.tags %}
+      <div><span>标签</span><strong>{{ page.tags | join: ", " }}</strong></div>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="report-body">
+    {{ content }}
+  </section>
+</article>
