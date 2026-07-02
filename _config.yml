@@ -1,0 +1,30 @@
+title: ResearchForChatgpt
+description: Agent-generated research reports rendered as a GitHub Pages site.
+url: "https://molaison.github.io"
+baseurl: "/ResearchForChatgpt"
+lang: zh-CN
+timezone: Asia/Tokyo
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+collections: {}
+
+defaults:
+  - scope:
+      path: "research"
+    values:
+      layout: report
+
+exclude:
+  - skills
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
