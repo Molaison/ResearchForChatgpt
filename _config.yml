@@ -3,6 +3,7 @@ description: Agent-generated research reports rendered as a GitHub Pages site.
 url: "https://molaison.github.io"
 baseurl: "/ResearchForChatgpt"
 lang: zh-CN
+encoding: UTF-8
 timezone: Asia/Tokyo
 markdown: kramdown
 highlighter: rouge
@@ -12,8 +13,6 @@ kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
-
-collections: {}
 
 defaults:
   - scope:
